@@ -1,7 +1,14 @@
 'use strict';
 
 
-angular.module('core').controller('HomeController', ['$scope', 'Authentication',
+angular.module('core').
+config(function($routeProvider){
+
+	$routeProvider.
+	when('/',{templateUrl:'/partials/directory.html'}).
+	when('/view/:id', {templateUrl:'/partials/view.html', controller:'viewController'})
+}).
+controller('HomeController', ['$scope', 'Authentication',
 	function($scope, Authentication) {
 		// This provides Authentication context.
 		$scope.authentication = Authentication;
@@ -83,5 +90,6 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
         logo: 'dilog',      
       });
     };		  
-		}
-]);
+	}
+
+]).controller('viewController', ['$scope', function($scope){}])

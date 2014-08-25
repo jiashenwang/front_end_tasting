@@ -1,4 +1,4 @@
-<section data-ng-controller="HomeController" ng-app="StoreController">
+<section data-ng-controller="HomeController">
     <div class="wrapper container-fluid">
         <div class="row">
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-0">
@@ -12,10 +12,10 @@
     			    </div>
     			  </div>
     		</div>
-            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12" >
+            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
                 <div class="row">
-                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" ng-repeat="product in products">
-                        <a ng-href="#/projects/{{product.name}}">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" ng-repeat="product in products" ng-model="template">
+                        <a ng-href="#">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
                                 <div class="row">
@@ -44,4 +44,6 @@
             </div>
     	</div>        
     </div>
+
+
 </section>
