@@ -6,6 +6,16 @@ angular.module('users').controller('SettingsController', ['$scope', '$http', '$l
 
 		// If user is not signed in then redirect back home
 		if (!$scope.user) $location.path('/');
+/*
+		$scope.signin = function(){
+			console.log($scope.credentials.email);
+			Users.login.query({
+				"email" : $scope.credentials.email,
+				"password" : $scope.credentials.password
+			},function(data){
+				console.log($data);
+			})
+		};*/
 
 		// Check if there are additional accounts 
 		$scope.hasConnectedAdditionalSocialAccounts = function(provider) {
@@ -56,6 +66,20 @@ angular.module('users').controller('SettingsController', ['$scope', '$http', '$l
 		};
 
 		// Change user password
+
+		$scope.changeUserPassword = function() {
+			console.log($scope.credentials.email);
+			Users.update_password.query({
+
+				"user_id": $scope.credentials.user_id,
+				"old_password": $scope.credentials.password,
+				"new_password": $scope.credentials.new_password//Required，至少六位		
+						
+			},function(data){
+				console.log(data);
+			})			
+		};	
+/*
 		$scope.changeUserPassword = function() {
 			$scope.success = $scope.error = null;
 
@@ -66,6 +90,6 @@ angular.module('users').controller('SettingsController', ['$scope', '$http', '$l
 			}).error(function(response) {
 				$scope.error = response.message;
 			});
-		};
+		};*/
 	}
 ]);

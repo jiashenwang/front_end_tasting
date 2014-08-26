@@ -3093,6 +3093,7 @@ input[type="button"].btn-block {
 }
 .collapse {
   display: none;
+  background: #F0F0F0;
 }
 .collapse.in {
   display: block;
@@ -6218,12 +6219,13 @@ body {
 
 #wrapper {
     padding-left: 0;
+
 }
 
 #page-wrapper {
     width: 100%;
     padding: 0;
-    background-color: #E8E8E8;
+    background-color: #white;
 }
 
 .huge {
@@ -6258,8 +6260,8 @@ body {
 .top-nav>li>a {
     padding-top: 15px;
     padding-bottom: 15px;
-    line-height: 20px;
-    color: #000;
+    line-height: 40px;
+    color: black;
 }
 
 .top-nav>li>a:hover,
@@ -6346,7 +6348,7 @@ ul.alert-dropdown {
     display: block;
     padding: 10px 15px 10px 38px;
     text-decoration: none;
-    color: #E8E8E8;
+    color: black;
 }
 
 .side-nav>li>ul>li>a:hover {
@@ -6433,6 +6435,7 @@ ul.alert-dropdown {
 .container-fluid
 {
     padding-top: 50px;
+    background: white;
 }
 .panel
 {
@@ -6459,13 +6462,13 @@ ul.alert-dropdown {
 .container
 {
     width: 1200px;
-    background: white;
+    background: #white;
 }
 .large-container
 {
-    width: 1100px;
+    width: 1300px;
     height: 200px;
-    background: white;
+    background: #E8E8E8;
 }
 .form-group-js
 {
@@ -6491,5 +6494,4 @@ ul.alert-dropdown {
 .ng-valid.ng-dirty{
     border-color:#78FA89;
 }
-
 

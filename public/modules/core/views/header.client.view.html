@@ -35,11 +35,22 @@
                         <a href="#"><i class="fa fa-fw fa-table"></i> About</a>
                     </li>                                                     
                 </ul>
-                <ul class="nav navbar-right top-nav">
-                    <li>
-                        <a href="#"><i class="fa fa-fw fa-table"></i> Account</a>
-                    </li>                 	
+                <ul class="nav navbar-right top-nav" data-ng-hide="authentication.user">
+                    <li ui-route="/signup" ng-class="{active: $uiRoute}">
+                        <a href="/#!/signin"><i class="fa fa-fw fa-table"></i> Sign In</a>
+                    </li> 
+                    <li ui-route="/signup" ng-class="{active: $uiRoute}">
+                        <a href="/auth/signout" ua-logout>Log Out</a>
+                    </li>                  	
                 </ul>
+                <ul class="nav navbar-right top-nav" data-ng-show="authentication.user">
+                    <li ui-route="/signup" ng-class="{active: $uiRoute}">
+                        <a href="/#!/signin"><i class="fa fa-fw fa-table"></i> Sign In</a>
+                    </li> 
+                    <li ui-route="/signup" ng-class="{active: $uiRoute}">
+                        <a href="/auth/signout" ua-logout>Log Out</a>
+                    </li>                   
+                </ul>                
             </div>
             <!-- /.navbar-collapse -->
         </nav>	

@@ -1,13 +1,13 @@
 'use strict';
 
 
-angular.module('core').
+angular.module('core')./*
 config(function($routeProvider){
 
 	$routeProvider.
 	when('/',{templateUrl:'/partials/directory.html'}).
 	when('/view/:id', {templateUrl:'/partials/view.html', controller:'viewController'})
-}).
+}).*/
 controller('HomeController', ['$scope', 'Authentication',
 	function($scope, Authentication) {
 		// This provides Authentication context.
